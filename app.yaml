@@ -1,0 +1,7 @@
+runtime: python310  # Specifies the Python version
+entrypoint: gunicorn -b :$PORT "question 5:app"  # This tells GAE how to run the Flask app
+
+instance_class: F1  # Specifies the instance type; F1 is a basic, free tier instance
+
+env_variables:
+  SECRET_KEY: 'your_secret_key'  # Replace this with your secret key for session management
